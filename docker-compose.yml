@@ -1,0 +1,16 @@
+version: "3"
+
+secrets:
+  tailscale_authkey:
+    file: authkey.txt
+
+services:
+  caddy:
+    image: erlend/caddy
+    command: caddy tailscale-proxy --from=tailscale/example:80 --to=app:4567
+    environment:
+      TS_AUTHFILE: /run/secrets/tailscale_authkey
+    secrets: [tailscale_authkey]
+
+  app:
+    build: .
