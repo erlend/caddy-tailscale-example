@@ -7,10 +7,12 @@ secrets:
 services:
   caddy:
     image: erlend/caddy
-    command: caddy tailscale-proxy --from=tailscale/example:80 --to=app:4567
+    command: caddy tailscale-proxy --from=tailscale/grafana:80 --to=grafana:3000
     environment:
       TS_AUTHFILE: /run/secrets/tailscale_authkey
     secrets: [tailscale_authkey]
 
-  app:
-    build: .
+  grafana:
+    image: grafana/grafana
+    volumes:
+      - ./grafana.ini:/etc/grafana/grafana.ini
