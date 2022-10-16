@@ -1,6 +1,6 @@
 # Caddy Tailscale reverse proxy
 
-Reverse proxy with authentication using [erlend/caddy]((https://hub.docker.com/r/erlend/caddy)
+Reverse proxy with authentication using [erlend/caddy](https://hub.docker.com/r/erlend/caddy)
 Docker image. 
 
 # Example
