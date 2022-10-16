@@ -1,6 +1,6 @@
 # Caddy Tailscale reverse proxy
 
-Reverse proxy with authentication using [erlend/caddy](https://hub.docker.com/r/erlend/caddy)
+Reverse proxy with authentication using [erlend/caddy](https://hub.docker.com/r/erlend/caddy)@
 Docker image. 
 
 # Example
@@ -12,7 +12,8 @@ Docker image.
 4. Start the service: `docker compose up`.
 5. Verify that the proxy is up with `curl example` or by browsing [http://example](http://example). Note: [MagicDNS](https://login.tailscale.com/admin/dns) required. Alternatively find the ip-address of the "example" machine here: [Tailscale Machines](https://login.tailscale.com/admin/machines) and connect to http://100.x.x.x
 
-# Authenticate to Grafana
+
+# Example: Authenticate to Grafana
 
 You can [configure Grafana to let a HTTP reverse proxy handle authentication](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-authentication/auth-proxy/).
 This enables you to access a Graphana instance from any device on your Tailscale network without entering credentials.
